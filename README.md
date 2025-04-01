@@ -1,31 +1,94 @@
 <p align="center">
-  <a href="https://roots.io/sage/"><img alt="Sage" src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="100"></a>
+  <img src="https://raw.githubusercontent.com/tortadecodigos/assets/main/logo-tdc.svg" alt="Torta de Códigos" height="100" />
 </p>
 
 <p align="center">
-  <a href="https://packagist.org/packages/roots/sage"><img alt="Packagist Installs" src="https://img.shields.io/packagist/dt/roots/sage?label=projects%20created&colorB=2b3072&colorA=525ddc&style=flat-square"></a>
-  <a href="https://github.com/roots/sage/actions/workflows/main.yml"><img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/roots/sage/main.yml?branch=main&logo=github&label=CI&style=flat-square"></a>
-  <a href="https://bsky.app/profile/roots.dev"><img alt="Follow roots.dev on Bluesky" src="https://img.shields.io/badge/follow-@roots.dev-0085ff?logo=bluesky&style=flat-square"></a>
+  <strong>Base WordPress Starter Theme da Torta de Códigos</strong><br>
+  Construído sobre o Sage, com Blade, TailwindCSS e Vite
 </p>
 
-# Sage
+---
 
-**Advanced hybrid WordPress starter theme with Laravel Blade and Tailwind CSS**
+## 🍰 tdc-base
 
-- 🔧 Clean, efficient theme templating with Laravel Blade
-- ⚡️ Modern front-end development workflow powered by Vite
-- 🎨 Out of the box support for Tailwind CSS
-- 🚀 Harness the power of Laravel with [Acorn integration](https://github.com/roots/acorn)
-- 📦 Block editor support built-in
+Este repositório é a base oficial de desenvolvimento de temas WordPress da **Torta de Códigos**, pensado para produtividade, performance e consistência em todos os projetos.
 
-Sage brings proper PHP templating and modern JavaScript tooling to WordPress themes. Write organized, component-based code using Laravel Blade, enjoy instant builds and CSS hot-reloading with Vite, and leverage Laravel's robust feature set through Acorn.
+### ⚙️ Tecnologias
+- Laravel Blade para templating organizado e limpo
+- TailwindCSS v4 com design system via CSS Custom Properties
+- Vite para build rápido e hot reload
+- Acorn para integração de recursos Laravel no WordPress
+- ACF para criação de blocos personalizados
 
-[Read the docs to get started](https://roots.io/sage/docs/installation/)
+---
 
-## Sponsors
+## 🚀 Como começar um novo projeto
 
-Sage is an open source project and completely free to use. If you've benefited from our projects and would like to support our future endeavors, [please consider sponsoring us](https://github.com/sponsors/roots).
+### 1. Clone o repositório
+```bash
+git clone git@github.com:tortadecodigos/tdc-base.git nome-do-tema
+cd nome-do-tema
+rm -rf .git
+```
 
-<div align="center">
-<a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="120" height="90"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="120" height="90"></a> <a href="https://worksitesafety.ca/careers/"><img src="https://cdn.roots.io/app/uploads/worksite-safety.svg" alt="Worksite Safety" width="120" height="90"></a> <a href="https://40q.agency/"><img src="https://cdn.roots.io/app/uploads/40q.svg" alt="40Q" width="120" height="90"></a> <a href="https://www.itineris.co.uk/"><img src="https://cdn.roots.io/app/uploads/itineris.svg" alt="Itineris" width="120" height="90"></a> <a href="https://bonsai.so/"><img src="https://cdn.roots.io/app/uploads/bonsai.svg" alt="Bonsai" width="120" height="90"></a>
-</div>
+### 2. Configure o `.env`
+Crie um arquivo `.env` na raiz do tema com:
+
+```env
+APP_URL=http://localhost/sua-instancia
+```
+
+> Substitua pela URL local do seu WordPress.
+
+### 3. Ajuste o caminho base no `vite.config.js`
+
+```js
+base: '/wp-content/themes/nome-do-tema/public/',
+```
+
+### 4. Instale as dependências
+```bash
+composer install
+npm install
+```
+
+### 5. Gere os arquivos do tema
+```bash
+npm run build
+```
+
+> ⚠️ Esse passo é **obrigatório** para gerar o `manifest.json`. Sem isso, o tema exibirá o erro:
+>
+> `Vite manifest not found at /path/to/public/build/manifest.json`
+
+---
+
+## 📦 Estrutura do projeto
+
+```
+.
+├── app/              # Configuração do tema (setup, filtros, etc.)
+├── resources/
+│   ├── views/        # Templates Blade
+│   ├── css/          # Estilos com Tailwind
+│   ├── js/           # Scripts do tema
+├── public/           # Arquivos gerados pelo Vite (build final)
+├── composer.json
+├── vite.config.js
+└── .env
+```
+
+---
+
+## 📚 Créditos e base original
+
+Este tema é baseado no [Sage](https://roots.io/sage/), da Roots, com ajustes e estrutura padronizada pela Torta de Códigos.
+
+> Sage é um tema starter para WordPress com Blade, Tailwind e Vite. Saiba mais em [roots.io/sage](https://roots.io/sage).
+
+---
+
+## 🧁 Torta de Códigos
+
+**Uma empresa especializada em terceirização de desenvolvimento WordPress para agências.**  
+Saiba mais em: [https://tortadecodigos.com.br](https://tortadecodigos.com.br)
