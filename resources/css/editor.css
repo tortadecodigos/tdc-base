@@ -1,0 +1,14 @@
+@import './app.css';
+@import "tailwindcss" theme(static);
+@source "../views/";
+@source "../../app/";
+
+.editor-styles-wrapper {
+    font-family: var(--font-primary) !important;
+}
+
+
+.interface-complementary-area__fill,
+.editor-sidebar{
+    min-width: 400px;
+}

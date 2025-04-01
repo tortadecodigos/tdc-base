@@ -1,0 +1,10 @@
+@import "tailwindcss" theme(static);
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+@source "../views/";
+@source "../../app/";
+
+
+@theme{
+    --color-primary: #003E8D;
+    --font-sans: 'PT Sans', sans-serif;
+}
